@@ -3,8 +3,7 @@ import shop from "../assets/shop.jpg";
 import discount from "../assets/discount.jpg";
 import delivery from "../assets/delivery.jpg";
 import "./Home.css";
-import { Container } from "@mui/material";
-import Header from "./Header";
+import Product from "./Product";
 
 const Home = () => {
   const banner = [shop, discount, delivery];
@@ -20,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <Container className="banner-container">
+      
         <div className="banner">
           <img src={banner[currentIndex]} alt={`Banner ${currentIndex + 1}`} />
         </div>
@@ -32,7 +31,6 @@ const Home = () => {
             ></span>
           ))}
         </div>
-      </Container>
     </>
   );
 };

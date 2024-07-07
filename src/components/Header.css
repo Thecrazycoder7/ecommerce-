@@ -8,6 +8,12 @@
     position: sticky;
     z-index: 100;
 }
+.header_container{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .header_logo{
     /* padding: 20px; */
     width: 120px;
