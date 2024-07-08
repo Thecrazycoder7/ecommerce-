@@ -1,15 +1,21 @@
 import React, { useContext } from "react";
+import {useNavigate} from 'react-router-dom'
 import "./ProductCard.css";
 import { ProductContext } from "../context/ProductContext";
 import { Button } from "@mui/material";
 
 const ProductCard = ({ selectedCategory }) => {
   const { products } = useContext(ProductContext);
+  const navigate = useNavigate();
 
   // Filter products based on selectedCategory
   const filteredProducts = selectedCategory
     ? products.filter((product) => product.category === selectedCategory)
     : products;
+
+  const handleCardClick = (id) => {
+    navigate(`/product/${id}`);
+  };
 
   return (
     <div className="product_container">
@@ -17,7 +23,11 @@ const ProductCard = ({ selectedCategory }) => {
         <p>No products found in this category.</p>
       ) : (
         filteredProducts.map((product) => (
-          <div className="product_card" key={product.id}>
+          <div
+            className="product_card"
+            key={product.id}
+            onClick={() => handleCardClick(product.id)}
+          >
             <img
               src={product.image}
               alt={product.title}

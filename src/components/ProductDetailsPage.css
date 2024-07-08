@@ -1,0 +1,31 @@
+.detail_page{
+    margin: 20px;
+}
+
+.image_display img{
+    height: auto;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.item_detail{
+    margin: 20px;
+}
+
+.item_detail span{
+    display: flex;
+    flex-direction: column;
+    color: rgb(59, 59, 59);
+    font-size: 15px;
+}
+
+.btn{
+    outline: none;
+    text-decoration: none;
+    border: none;
+    padding: 10px 15px;
+    background-color: brown;
+    border-radius: 20px;
+    color: azure;
+    margin-top: 25px;
+}

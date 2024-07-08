@@ -4,10 +4,10 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
-h2{
+.category_container h2{
     text-align: center;
 }
-p{
+.category_container p{
     font-size: 15px;
     color: rgb(46, 46, 46);
     font-weight: 500;
