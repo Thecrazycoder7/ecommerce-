@@ -4,7 +4,7 @@ import Layout from './components/Layout.js'
 
 function App() {
   return (
-    <Router>
+      <Router>
       <div className="app">
         <Header />
         <Routes>

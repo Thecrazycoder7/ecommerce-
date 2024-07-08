@@ -3,7 +3,6 @@ import shop from "../assets/shop.jpg";
 import discount from "../assets/discount.jpg";
 import delivery from "../assets/delivery.jpg";
 import "./Home.css";
-import Product from "./Product";
 
 const Home = () => {
   const banner = [shop, discount, delivery];

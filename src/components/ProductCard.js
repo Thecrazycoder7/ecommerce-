@@ -1,36 +1,41 @@
-import React, { useState, useEffect } from 'react'
-import './ProductCard.css'
-import axios from "axios";
+import React, { useContext } from "react";
+import "./ProductCard.css";
+import { ProductContext } from "../context/ProductContext";
+import { Button } from "@mui/material";
 
-const ProductCard = () => {
-    const [data, setData] = useState([]);
+const ProductCard = ({ selectedCategory }) => {
+  const { products } = useContext(ProductContext);
 
-    useEffect(() => {
-      axios
-        .get("https://api.example.com/data")
-        .then((response) => {
-          setData(response.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }, []);
+  // Filter products based on selectedCategory
+  const filteredProducts = selectedCategory
+    ? products.filter((product) => product.category === selectedCategory)
+    : products;
+
   return (
-    <>
-        {
-            data.map(item => (
-                <div className="card_container" key={item.id}>
-      <div className='image_container'>
-        <img alt="" src={item.image} />
-      </div>
-      <div>
-        <h2>Cream</h2>
-      </div>
+    <div className="product_container">
+      {filteredProducts.length === 0 ? (
+        <p>No products found in this category.</p>
+      ) : (
+        filteredProducts.map((product) => (
+          <div className="product_card" key={product.id}>
+            <img
+              src={product.image}
+              alt={product.title}
+              className="product_image"
+            />
+            <div className="product_detail">
+              <p className="product_title">{product.title}</p>
+              <h4 className="product_price">Price: ${product.price}</h4>
+              <span className="product_rating">
+                Rating: {product.rating.rate}
+              </span>
+              <Button>Add to cart</Button>
+            </div>
+          </div>
+        ))
+      )}
     </div>
-            )   )
-        }
-    </>
   );
-}
+};
 
-export default ProductCard
+export default ProductCard;

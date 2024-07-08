@@ -5,10 +5,10 @@ import Category from "./Category";
 
 const Layout = () => {
   return (
-    <Container className="banner-container">
-      <Home />
-      <Category />
-    </Container>
+      <Container className="banner-container">
+        <Home />
+        <Category />
+      </Container>
   );
 };
 
