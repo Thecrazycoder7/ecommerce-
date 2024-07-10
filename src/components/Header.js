@@ -22,7 +22,9 @@ const Header = () => {
           <Link className="header_link">
             <div className="header_option">
               <span>Hello User</span>
-              <span>Sign In</span>
+              <Link className="header_link" to="/signin">
+                signin
+              </Link>
             </div>
           </Link>
           <Link className="header_link">

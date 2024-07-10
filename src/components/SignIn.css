@@ -1,0 +1,42 @@
+.container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signin_container{
+    width: 250px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.signin_container img{
+    display: flex;
+    margin: auto;
+    height: 30px;
+}
+.input_box{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    color: rgb(27, 27, 27);
+}
+.input_box input{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-bottom: 2px solid gray;
+}
+
+.signin_container button{
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    background-color: bisque;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 20px;
+}

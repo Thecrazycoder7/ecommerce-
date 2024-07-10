@@ -26,9 +26,9 @@ const ProductDetailsPage = () => {
           <h2>Know more details of product</h2>
           <p>{product.description}</p>
           <p>Category: {product.category}</p>
-          <h4>Price: ${product.price}</h4>
           <span>Rating: {product.rating.rate}</span>
           <span>Reviews: {product.rating.count}</span>
+          <h4>Price: ${product.price}</h4>
         <button className='btn'>Add to cart</button>
         </div>
       </div>
