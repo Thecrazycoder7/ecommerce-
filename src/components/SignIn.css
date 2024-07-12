@@ -2,20 +2,26 @@
     height: 90vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .signin_container{
     width: 250px;
-    margin: auto;
     padding: 30px;
     border: 2px solid grey;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.signin_container img{
-    display: flex;
+.signin_container h2{
+    text-align: center;
     margin: auto;
+}
+
+.container img{
+    margin-bottom: 25px;
     height: 30px;
 }
 .input_box{
@@ -32,11 +38,22 @@
 }
 
 .signin_container button{
-    padding: 5px 15px;
+    padding: 10px;
     border: none;
     outline: none;
     background-color: bisque;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     border-radius: 20px;
+
+}
+.condition_statement{
+    font-size: 13px;
+    color: grey;
+    text-align: center;
+}
+
+.condition_statement span{
+    color: brown;
+    font-weight: 500;
 }

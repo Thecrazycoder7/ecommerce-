@@ -21,7 +21,6 @@ const Header = () => {
         <div className="header_nav">
           <Link className="header_link">
             <div className="header_option">
-              <span>Hello User</span>
               <Link className="header_link" to="/signin">
                 signin
               </Link>
@@ -33,7 +32,7 @@ const Header = () => {
               <span>& Order</span>
             </div>
           </Link>
-          <Link className="header_link">
+          <Link to='/cart' className="header_link">
             <div className="header_option_cart">
               <ShoppingCartIcon />
               <span>0</span>

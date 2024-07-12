@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import "./ProductCard.css";
 import { ProductContext } from "../context/ProductContext";
-import { Button } from "@mui/material";
 
 const ProductCard = ({ selectedCategory }) => {
-  const { products } = useContext(ProductContext);
+  const { products, addToCart } = useContext(ProductContext);
   const navigate = useNavigate();
 
   // Filter products based on selectedCategory
@@ -23,11 +22,7 @@ const ProductCard = ({ selectedCategory }) => {
         <p>No products found in this category.</p>
       ) : (
         filteredProducts.map((product) => (
-          <div
-            className="product_card"
-            key={product.id}
-            onClick={() => handleCardClick(product.id)}
-          >
+          <div className="product_card" key={product.id}>
             <img
               src={product.image}
               alt={product.title}
@@ -39,7 +34,16 @@ const ProductCard = ({ selectedCategory }) => {
               <span className="product_rating">
                 Rating: {product.rating.rate}
               </span>
-              <Button>Add to cart</Button>
+              <br />
+              <button
+                className="btn_view"
+                onClick={() => handleCardClick(product.id)}
+              >
+                View Detail
+              </button>
+              <button className="btn" onClick={() => addToCart(product.id)}>
+                Add
+              </button>
             </div>
           </div>
         ))

@@ -4,6 +4,8 @@
   gap: 20px;
   justify-content: center;
   padding: 20px;
+  transition: .3s;
+  animation: fadeIn 1s;
 }
 
 .product_card {
@@ -12,7 +14,8 @@
   padding: 10px;
   width: 200px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  transition: .3s;
+  animation: fadeIn 1s;
 }
 
 .product_card:hover {
@@ -43,4 +46,13 @@
 
 .product_rating {
   color: #777;
+  margin: auto;
+}
+.btn_view{
+  outline: none;
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px;
 }
