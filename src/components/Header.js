@@ -13,16 +13,11 @@ const Header = () => {
           <img className="header_logo" src={logo} alt="img" />
         </Link>
 
-        <div className="header_search">
-          <input type="text" className="header_searchinput" />
-          <SearchIcon className="search_icons" />
-        </div>
-
         <div className="header_nav">
           <Link className="header_link">
             <div className="header_option">
               <Link className="header_link" to="/signin">
-                signin
+                Signin
               </Link>
             </div>
           </Link>

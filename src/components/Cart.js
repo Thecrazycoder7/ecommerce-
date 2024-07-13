@@ -1,13 +1,15 @@
-import React, { useContext } from 'react';
-import { ProductContext } from '../context/ProductContext';
-import { Container, Divider } from '@mui/material';
-import './Cart.css'
+import React, { useContext } from "react";
+import { ProductContext } from "../context/ProductContext";
+import { Container, Divider } from "@mui/material";
+import "./Cart.css";
 
 const Cart = () => {
-  const { cartItems, products, removeFromCart } = useContext(ProductContext);
+  const { cartItems, products, removeFromCart, getTotalAmount } =
+    useContext(ProductContext);
   const truncateTitle = (title) => {
     return title.length > 15 ? `${title.substring(0, 15)}...` : title;
   };
+
   return (
     <Container>
       <div className="cart">
@@ -20,16 +22,17 @@ const Cart = () => {
                   <img src={item.image} alt={item.title} />
                 </div>
                 <p className="product_title">{truncateTitle(item.title)}</p>
-                <p>{item.price}</p>
+                <p>${item.price}</p>
                 <p>{cartItems[item.id]}</p>
-                <p>{item.price * cartItems[item.id]}</p>
+                <p>${item.price * cartItems[item.id]}</p>
                 <p
                   style={{
                     fontSize: "20px",
                     fontWeight: "600",
-                    background: "brown",
+                    background: "antiquewhite",
                     padding: "5px 12px",
                     borderRadius: "50%",
+                    cursor: "pointer",
                   }}
                   onClick={() => removeFromCart(item.id)}
                 >
@@ -41,20 +44,14 @@ const Cart = () => {
 
         <div className="item_bill">
           <div>
-           <h2>Choose shipping mode: </h2>
-            <input type="radio" />
-            <label>Store Pickup</label> <br />
-            <input type="radio" />
-            <label>Home Delivery</label>
-          </div>
-          <div>
-            {/* Subtotal: <label>{item.price * cartItems[item.id]}</label> */}
-            <button>Order</button>
+            <p>Subtotal: </p>
+            <p>${getTotalAmount()}</p>
+            <button className="btn">Order</button>
           </div>
         </div>
       </div>
     </Container>
   );
-}
+};
 
 export default Cart;

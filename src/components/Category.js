@@ -7,26 +7,21 @@ import item from "../assets/categoryImg/item.jpg";
 import "./Category.css";
 import { Divider } from "@mui/material";
 import { ProductContext } from "../context/ProductContext";
-import ProductCard from "./ProductCard";
 
 const Category = () => {
-  const { products } = useContext(ProductContext);
+  const { handleCategoryClick, selectedCategory } = useContext(ProductContext);
 
   const ListImg = {
     products: item,
     electronics: electronic,
     jewelery: jewelry,
-    "men's clothing": mens,
-    "women's clothing": women,
+    mens: mens,
+    womens: women,
   };
 
   const categories = Object.keys(ListImg);
 
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(category === "products" ? null : category);
-  };
+  
 
   return (
     <div className="category_container">
@@ -47,9 +42,7 @@ const Category = () => {
         ))}
       </div>
       <Divider />
-
-      {/* Pass selectedCategory as prop to ProductCard */}
-      <ProductCard selectedCategory={selectedCategory} />
+  
     </div>
   );
 };

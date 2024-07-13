@@ -4,6 +4,7 @@ import Layout from './components/Layout.js'
 import ProductDetailsPage from './components/ProductDetailsPage.js';
 import SignIn from './components/SignIn';
 import Cart from './components/Cart.js';
+import Footer from './components/Footer.js';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </div>
       
     </Router>
