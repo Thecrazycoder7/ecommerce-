@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-          <Header />
+        <Header />
         <Routes>
           <Route path="/" element={<Layout />} />
           <Route path="/product/:id" element={<ProductDetailsPage />} />

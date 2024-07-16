@@ -30,12 +30,11 @@
 }
 
 .item_bill{
-    background-color: antiquewhite;
     width: 100%;
-    padding: 10px 5px;
     border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 20px;
+}
+.item_bill div{
+    padding: 20px;
+    font-weight: 500;
 }
