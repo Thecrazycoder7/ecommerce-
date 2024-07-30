@@ -17,16 +17,8 @@ This project is an eCommerce website designed to understand and implement the co
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript, React
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Authentication**: JWT (JSON Web Tokens)
-- **Payment Gateway**: Stripe API
 
-## Getting Started
 
 ### Prerequisites
 
 - Node.js installed on your machine
-- MongoDB installed and running
-- Stripe account for payment integrations
-   
